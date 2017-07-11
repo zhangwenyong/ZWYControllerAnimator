@@ -9,9 +9,15 @@
 #import "ZWYActivityViewController.h"
 #import "animation.h"
 #import "topView.h"
-
+#import "titleVIew.h"
+#import <SDAutoLayout/SDAutoLayout.h>
+#import "bottomView.h"
 @interface ZWYActivityViewController ()
 @property (nonatomic,strong)animation *ani;
+/**
+ 注释
+ */
+@property (nonatomic,weak)titleVIew *ZtitleView;
 
 /**
  注释
@@ -22,6 +28,11 @@
  注释
  */
 @property (nonatomic,weak)topView *top;
+
+/**
+ 注释
+ */
+@property (nonatomic,strong)bottomView *bootm;
 @end
 
 @implementation ZWYActivityViewController
@@ -71,6 +82,17 @@
     
     _top = top;
     
+    titleVIew *title =[[titleVIew alloc]init];
+    
+    [self.view addSubview:title];
+    
+    _ZtitleView = title;
+    
+    bottomView *bootm = [[bottomView alloc]init];
+    [self.view addSubview: bootm];
+    
+    
+    _bootm = bootm;
 }
 
 -(void)viewDidLayoutSubviews
@@ -81,9 +103,9 @@
     _vis.sd_layout.topSpaceToView(self.view, 0).leftSpaceToView(self.view, 0).rightSpaceToView(self.view, 0).bottomSpaceToView(self.view, 0);
     _top.sd_layout.topSpaceToView(self.view, 0).leftSpaceToView(self.view, 0).rightSpaceToView(self.view, 0);
     
+    _ZtitleView.sd_layout.topSpaceToView(_top, 0).leftSpaceToView(self.view, 0).rightSpaceToView(self.view, 0);
     
-    
-    
+    _bootm.sd_layout.topSpaceToView(_ZtitleView, 0).leftSpaceToView(self.view, 0).rightSpaceToView(self.view, 0);
 }
 
 - (void)didReceiveMemoryWarning {

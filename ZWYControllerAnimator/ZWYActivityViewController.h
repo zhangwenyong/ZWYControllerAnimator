@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <SDAutoLayout/SDAutoLayout.h>
+
 @interface ZWYActivityViewController : UIViewController
 
 
