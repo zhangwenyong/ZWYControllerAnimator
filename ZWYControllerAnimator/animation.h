@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-
 @interface animation : NSObject <UIViewControllerTransitioningDelegate>
 
 

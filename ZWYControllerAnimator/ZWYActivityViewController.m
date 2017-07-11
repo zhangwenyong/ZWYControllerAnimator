@@ -8,8 +8,21 @@
 
 #import "ZWYActivityViewController.h"
 #import "animation.h"
+#import "topView.h"
+#import <SDAutoLayout.h>
+#import "jinhuodanView.h"
 @interface ZWYActivityViewController ()
 @property (nonatomic,strong)animation *ani;
+
+/**
+ 注释
+ */
+@property (nonatomic,strong)UIVisualEffectView *vis;
+
+/**
+ 注释
+ */
+@property (nonatomic,weak)topView *top;
 @end
 
 @implementation ZWYActivityViewController
@@ -29,8 +42,49 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor redColor];
+    self.view.backgroundColor = [UIColor colorWithRed:97/255.0 green:97/255.0 blue:97/255.0 alpha:0.1];
+    
+    [self addXUHUA];
+  
+    
+    [self addContent];
     // Do any additional setup after loading the view.
+}
+
+-(void)addXUHUA
+{
+    UIBlurEffect *effect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
+
+    UIVisualEffectView *vis = [[UIVisualEffectView alloc]initWithEffect:effect];
+    
+    [self.view addSubview:vis];
+    vis.alpha = 1.0;
+    
+    _vis = vis;
+    
+}
+-(void)addContent
+{
+    
+    topView *top = [[topView alloc]init];
+    
+    [self.view addSubview:top];
+    
+    _top = top;
+    
+}
+
+-(void)viewDidLayoutSubviews
+{
+ 
+    [super viewDidLayoutSubviews];
+    
+    _vis.sd_layout.topSpaceToView(self.view, 0).leftSpaceToView(self.view, 0).rightSpaceToView(self.view, 0).bottomSpaceToView(self.view, 0);
+    _top.sd_layout.topSpaceToView(self.view, 0).leftSpaceToView(self.view, 0).rightSpaceToView(self.view, 0);
+    
+    
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
