@@ -7,7 +7,7 @@
 //
 
 #import "bottomView.h"
-#import <SDAutoLayout/SDAutoLayout.h>
+
 @interface bottomView()
 
 @property(nonatomic,weak)UILabel *title;

@@ -7,7 +7,7 @@
 //
 
 #import "detaliView.h"
-#import <SDAutoLayout/SDAutoLayout.h>
+
 @interface detaliView()
 
 @property(nonatomic,weak)UIImageView *imageV;

@@ -8,7 +8,7 @@
 
 #import "titleVIew.h"
 #import "detaliView.h"
-#import <SDAutoLayout/SDAutoLayout.h>
+
 @interface titleVIew()
 
 

@@ -7,7 +7,6 @@
 //
 
 #import "topView.h"
-#import <SDAutoLayout/SDAutoLayout.h>
 @interface topView()
 
 @property(nonatomic,weak)UIImageView*imageV;
