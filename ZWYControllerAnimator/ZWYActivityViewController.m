@@ -9,7 +9,7 @@
 #import "ZWYActivityViewController.h"
 #import "animation.h"
 #import "topView.h"
-#import <SDAutoLayout.h>
+#import <SDAutoLayout/SDAutoLayout.h>
 @interface ZWYActivityViewController ()
 @property (nonatomic,strong)animation *ani;
 
