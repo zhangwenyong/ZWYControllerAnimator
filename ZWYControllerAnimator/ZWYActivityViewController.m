@@ -10,7 +10,6 @@
 #import "animation.h"
 #import "topView.h"
 #import <SDAutoLayout.h>
-#import "jinhuodanView.h"
 @interface ZWYActivityViewController ()
 @property (nonatomic,strong)animation *ani;
 
