@@ -7,23 +7,39 @@
 //
 
 #import "ZWYActivityViewController.h"
-
+#import "animation.h"
 @interface ZWYActivityViewController ()
-
+@property (nonatomic,strong)animation *ani;
 @end
 
 @implementation ZWYActivityViewController
 
+-(instancetype)init
+{
+    self = [super init];
+    
+    if(self)
+    {
+        animation *ss = [[animation alloc]init];
+        self.transitioningDelegate = ss;
+        _ani = ss;
+    }
+    return self;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = [UIColor redColor];
     // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 /*

@@ -12,7 +12,7 @@
 -(UIViewController *)GetZWYActivityViewController
 {
     
-    return  [self performTarget:@"ZWYActivityViewController" action:@"" params:nil shouldCacheTarget:YES];
+    return  [self performTarget:@"ZWYActivityViewController" action:@"ZWYActivityViewController" params:nil shouldCacheTarget:YES];
     
 }
 @end

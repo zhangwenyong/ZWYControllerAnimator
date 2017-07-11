@@ -8,17 +8,12 @@
 
 #import "Target_ZWYActivityViewController.h"
 #import "ZWYActivityViewController.h"
-#import "animation.h"
+
 @implementation Target_ZWYActivityViewController
 -(UIViewController *)Action_ZWYActivityViewController:(NSDictionary *)dic
 {
     
     ZWYActivityViewController *contre = [[ZWYActivityViewController alloc]init];
-    
-    
-    animation  *ani = [[animation alloc]init];
-    contre.transitioningDelegate = ani;
-    
     contre.modalPresentationStyle = UIModalPresentationCustom;
     
     return contre;
