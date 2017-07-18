@@ -56,9 +56,32 @@
     
     [self addXUHUA];
   
-    
+
     [self addContent];
+    
+    
+    
+    _top.dic = _ZWYviewmodel.orperDIc;
+    
+    
+    
+    _ZtitleView.dic = _ZWYviewmodel.activityDic;
+    
+    
+    
     // Do any additional setup after loading the view.
+}
+
+-(void)setZWYviewmodel:(viewmodel *)ZWYviewmodel
+{
+    
+    
+    
+    _ZWYviewmodel = ZWYviewmodel;
+    
+    
+  
+    
 }
 
 -(void)addXUHUA
@@ -90,7 +113,6 @@
     
     bottomView *bootm = [[bottomView alloc]init];
     [self.view addSubview: bootm];
-    
     
     _bootm = bootm;
 }

@@ -9,10 +9,10 @@
 #import "CTMediator+ZWYActivityViewController.h"
 
 @implementation CTMediator (ZWYActivityViewController)
--(UIViewController *)GetZWYActivityViewController
+-(UIViewController *)GetZWYActivityViewControllerWithDic:(NSDictionary *)dic
 {
     
-    return  [self performTarget:@"ZWYActivityViewController" action:@"ZWYActivityViewController" params:nil shouldCacheTarget:YES];
+    return  [self performTarget:@"ZWYActivityViewController" action:@"ZWYActivityViewController" params:dic shouldCacheTarget:YES];
     
 }
 @end

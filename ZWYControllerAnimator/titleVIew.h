@@ -10,4 +10,8 @@
 #import <SDAutoLayout/SDAutoLayout.h>
 @interface titleVIew : UIView
 
+/**
+ 注释  活动详情
+ */
+@property (nonatomic,strong)NSDictionary *dic;
 @end

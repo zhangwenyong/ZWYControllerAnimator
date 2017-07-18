@@ -7,8 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "viewmodel.h"
 
 @interface ZWYActivityViewController : UIViewController
 
-
+/**
+ 注释
+ */
+@property (nonatomic,strong)viewmodel *ZWYviewmodel;
 @end

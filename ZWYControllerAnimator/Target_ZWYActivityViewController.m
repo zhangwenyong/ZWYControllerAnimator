@@ -14,6 +14,11 @@
 {
     
     ZWYActivityViewController *contre = [[ZWYActivityViewController alloc]init];
+    
+    contre.ZWYviewmodel =[[viewmodel alloc]initWithDic:dic];
+    
+    
+    
     contre.modalPresentationStyle = UIModalPresentationCustom;
     
     return contre;

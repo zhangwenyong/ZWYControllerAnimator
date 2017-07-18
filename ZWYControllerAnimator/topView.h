@@ -10,4 +10,8 @@
 #import <SDAutoLayout/SDAutoLayout.h>
 @interface topView : UIView
 
+/**
+ 注释  图片和公司名称
+ */
+@property (nonatomic,strong)NSDictionary *dic;
 @end

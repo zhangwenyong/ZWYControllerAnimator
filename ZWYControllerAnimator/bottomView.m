@@ -57,7 +57,7 @@
     
     lbale2.textColor = [UIColor whiteColor];
     lbale2.textAlignment = NSTextAlignmentCenter;
-    lbale2.text = @"的危害大客户卡位乏味和福啊我 i 俄 u 发哈无法 i 俄 u 啊我 iu 恶法 i 我扶额盖屋";
+    lbale2.text = @"";
     _content = lbale2;
     
     

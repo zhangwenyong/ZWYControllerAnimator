@@ -32,11 +32,6 @@
     
     if(self){
         
-        _arr=@[@"满50减20,满80减30",@"满100包邮",@"等娃获得卡好看的卡危机恶化的卡号胃口哈我科技打电话撒谎是坎大哈开始大会"];
-
-   
-        [self addUI];
-        
     }
     
     return self;
@@ -66,6 +61,21 @@
     
     view1.backgroundColor =[UIColor whiteColor];
     view1.sd_layout.bottomSpaceToView(self, 0).leftSpaceToView(self, 30).rightSpaceToView(self, 30).heightIs(0.5);
+    
+}
+-(void)setDic:(NSDictionary *)dic
+{
+    
+    
+    if(dic)
+    {
+        _arr=@[dic[@"active_content"],dic[@"active_name"]];
+               
+               
+        [self addUI];
+
+    }
+
     
 }
 -(void)layoutSubviews

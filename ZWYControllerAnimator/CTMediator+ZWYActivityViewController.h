@@ -9,5 +9,6 @@
 #import <CTMediator/CTMediator.h>
 
 @interface CTMediator (ZWYActivityViewController)
--(UIViewController *)GetZWYActivityViewController;
+-(UIViewController *)GetZWYActivityViewControllerWithDic:(NSDictionary *)dic;
+
 @end

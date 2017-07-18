@@ -7,6 +7,8 @@
 //
 
 #import "topView.h"
+
+
 @interface topView()
 
 @property(nonatomic,weak)UIImageView*imageV;
@@ -51,7 +53,7 @@
     _imageV = imagev;
     imagev.image = [UIImage imageNamed:@"123"];
     UILabel *lbale = [[UILabel alloc]init];
-    lbale.text = @"上海爱姆意机电有限公司";
+    lbale.text = @"";
     lbale.textColor = [UIColor whiteColor];
     lbale.font = [UIFont systemFontOfSize:15];
     
@@ -78,5 +80,18 @@
     
     [self setupAutoHeightWithBottomView:_bottom bottomMargin:0];
 
+}
+-(void)setDic:(NSDictionary *)dic
+{
+    
+    
+    
+    _lableV.text = dic[@"corpName"];
+    NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString: dic[@"corpLogo"]]];
+    _imageV.image = [UIImage imageWithData:data];
+    
+    
+    
+    
 }
 @end
